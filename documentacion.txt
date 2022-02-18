@@ -1,0 +1,6 @@
+¿Qué es NPM (Node Package Manager)?
+Un gestor de paquetes y librerías, recursos para complementar proyectos Javascript
+Podemos crear paquetes y compartirlos allí
+
+con el comando 
+npm install -g npm@latest instalaremos la version más reciente de NPM
