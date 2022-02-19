@@ -1,17 +1,27 @@
 {
-  "name": "gestion-de-dependencias-y-paquetes-con-npm",
-  "version": "1.0.0",
-  "description": "This is a NPM course\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5DPlatzi NPM Course - Build a NPM Package for Node",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "javascript",
-    "node",
-    "package",
-    "npm"
-  ],
-  "author": "ATR",
-  "license": "ISC"
+	"name": "gestion-de-dependencias-y-paquetes-con-npm",
+	"version": "1.0.0",
+	"description": "This is a NPM course\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5DPlatzi NPM Course - Build a NPM Package for Node",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"javascript",
+		"node",
+		"package",
+		"npm"
+	],
+	"author": "ATR",
+	"license": "ISC",
+	"dependencies": {
+		"moment": "^2.29.1",
+		"webpack": "^5.69.1"
+	},
+	"devDependencies": {
+		"date-fns": "^2.8.0"
+	},
+	"optionalDependencies": {
+		"eslint": "^8.9.0"
+	}
 }

@@ -4,3 +4,98 @@ Podemos crear paquetes y compartirlos allí
 
 con el comando 
 npm install -g npm@latest instalaremos la version más reciente de NPM
+
+con el comando
+npm init -y nos va a generar el documento package.json de manera rápida y mínima
+
+Con el comando
+npm set init.author.email "alejoriosrivastr@gmail.com"
+npm set init.author.name "Alejandro TR"
+npm set init.license "MIT"
+Son para preestablecer valores con los que se va a generar el package.json
+
+(usar npm con la caja de comandos con permisos de ADMINISTRADOR)
+
+con el comando
+npm install dependencia por defecto lo configurará como una dependencia requerida en el proyecto
+
+npm install dependencia --save configurará la dependencia como dependencia solo mía o (local)
+shorcuts
+npm i moment -S
+
+npm install dependencia --save-dev será una dependencia de desarrollo o desarrollo local
+shorcuts
+npm i date-fns -D
+
+Con el comando
+npm list -g --depth 0 nos listará las dependencias que tenemos instaladas de forma global
+
+con el comando 
+npm i dependencia -O Instalará la dependencia de forma opcional
+
+con
+npm fund nos mostrará dependencias con necesidad de funding
+
+con
+npm i dependencia --dry-run simulamos la instalacion de una dependencia
+
+con 
+npm i dependencia -f forzamos la instalacion de una dependencia en la última version
+
+con
+npm i dependencia@version descargamos una version especifica de una dependencia
+
+Con 
+npm i o install instalamos las depedencias necesarias del proyecto que estan en el package.json
+
+con 
+npm outdate vemos los pquetes desactualizados
+npm outdate --d vemos todo el proceso de consulta
+
+npm install dependenciaInstalada@latest nos instalará la version más reciente de una dependencia que tengamos
+
+con el comando 
+npm uninstall dependencia desinstala completamente el paquete que hayamos descargado
+
+con 
+npm uninstall dependencia webpack --no-save desinstalamos una dependencia pero no la elimina del package.json
+
+el simbolo caret o ^ significa que será una version o posteriores, si se quita este estaremos diciendo que vamos a mantenernos en esa version a lo largo del tiempo
+
+con npm cache clean --force eliminará el caché del sistema con npm
+
+rimraf elimina una carpeta node_modules
+
+npm install -g rimraf instala globalmente todos los paquetes necesarios
+
+npm audit genera un documento con la informacion de los pquetes con vulnerabilidades 
+
+npm audit fix nos actualiza la ultima version las dependencias con vulnerabilidades
+
+Crear y publicar paquetes NPM
+0. Debemos tener una cuenta de NPM y debemos loggearnos desde la terminal con NPM
+	con npm adduser
+
+1. Iniciamos el proyecto con NPM init
+2. Lo configuramos
+3. Le agregamos al final del package.json esto:
+	Abajo de licence
+	"bin": {
+		"random-msg": "./bin/global.js"
+	},
+	"preferGlobal": true
+4. npm link actualizamos y bajamos nuestro propio paquete (debe ser desde la caja de comandos con permisos de administrador)
+5. npm publish
+Recordar que nuestros paquetes deben tener nombres unicos dentro del package.json, no puede ser igual al de otro paquete en NPM
+
+con npm installa -g npm instalamos la version actual de npm en nuestro sistema
+
+Cuando actualizamos nuestro paquete debemos tener en cuénta el peso de los cambios
+Parche? patch
+Menor? minor
+Mayor? major
+
+Para mandar la actualización al repositorio de NPM
+npm version patch actualiza nuestra version de NPM a la nueva
+
+npm publish nos envía el paquete a NPM Repository
